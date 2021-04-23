@@ -10,6 +10,13 @@ that particular CA Endevor inventory location.
 
 ## Prerequisites
 
+- Visual Studio Code v1.50.0 or higher
+- CA Endevor version 18.1 with the following PTFs:
+   - PTF S012309 for versioning of the REST API  
+   **Note:** Bridge for Git Explorer only works with v2 of the REST API
+- CA Endevor Bridge for Git
+- CA Endevor Plug-in for Zowe CLI version 6.1.0 or higher
+- CA Endevor Bridge for Git for Zowe CLI version 2.0.1 or higher
 - A CA Endevor Plug-in for Zowe CLI profile or an API ML base profile.  
   This profile should have the same configuration of CA Endevor used for
   the Git-Endevor mapping you have open in your workspace.
