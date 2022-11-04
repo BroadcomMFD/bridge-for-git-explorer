@@ -14,6 +14,7 @@ Bridge for Git Explorer enables you to work with work-environment Git-Endevor ma
 - [Getting Started](#getting-started)
   - [Create Profiles](#create-profiles)
   - [Work with Elements](#work-with-elements)
+- [Team Configuration File](#team-configuration-file)
 - [Use Cases](#use-cases)
   - [Add to Mapping](#add-to-mapping)
   - [Add to Mapping with Dependencies](#add-to-mapping-with-dependencies)
@@ -28,19 +29,17 @@ Ensure that you meet the following prerequisites before you use Bridge for Git E
 
 **Host-side prerequisites:**
 
-- Endevor version 18.1 with the following PTFs:
-
-  - SO15978
-
-**Note:** Bridge for Git Explorer only works with v2 of the REST API
-
-- [Endevor Bridge for Git](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-endevor-integrations-for-enterprise-devops/1-0/ca-endevor-bridge-for-git/set-up-and-run-the-ca-endevor-bridge-for-git.html)
+- Install either Endevor version 18.0.12 with the SO09580 and SO09581 PTFs or Endevor version 18.1 with the SO15978 PTF.
+- Install Endevor Web Services.
+- Install [Endevor Bridge for Git](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-endevor-integrations-for-enterprise-devops/1-0/ca-endevor-bridge-for-git/installing-ca-endevor-bridge-for-git.html).
 
 **Client-side prerequisites:**
 
-- [Endevor plug-in for Zowe CLI version 6.4.0 or higher](https://www.npmjs.com/package/@broadcom/endevor-for-zowe-cli)
-- [Endevor Bridge for Git plug-in for Zowe CLI version 2.1.0 or higher](https://www.npmjs.com/package/@broadcom/endevor-bridge-for-git-for-zowe-cli)
-- Cloned and opened synchronized Git-Endevor mapping in the VS Code workspace. For more information, see [Access and Clone a Synchronized Repository](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-endevor-integrations-for-enterprise-devops/1-0/ca-endevor-bridge-for-git/use-the-ca-enterprise-git-bridge/access-and-clone-an-initialized-git-endevor-mapping.html) in the Broadcom documentation.
+- Install Visual Studio Code version 1.58 or higher.
+- Access to Endevor.
+- [Endevor plug-in for Zowe CLI version 6.5.0 or higher](https://www.npmjs.com/package/@broadcom/endevor-for-zowe-cli).
+- [Endevor Bridge for Git plug-in for Zowe CLI version 2.1.0 or higher](https://www.npmjs.com/package/@broadcom/endevor-bridge-for-git-for-zowe-cli).
+- Cloned and opened synchronized Git-Endevor mapping in the VS Code workspace. For more information, see [Access and Clone a Synchronized Repository](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-endevor-integrations-for-enterprise-devops/1-0/ca-endevor-bridge-for-git/Using-ca-enterprise-git-bridge/access-and-clone-an-initialized-git-endevor-mapping.html) in the Broadcom documentation.
 
 ## Getting Started
 
@@ -48,7 +47,7 @@ Create an Endevor profile and an EBG profile and review use cases to see how you
 
 ### Create Profiles
 
-The Bridge for Git Explorer extension uses credentials of your Endevor profile to provide you with the list of elements that you can add to your synchronized mapping. Before you can use the extension, ensure that you create two types of profiles: an Endevor profile and an EBG profile.
+The Bridge for Git Explorer extension uses credentials of your Endevor profile to provide you with the list of elements that you can add to your synchronized mapping. Before you can use the extension, ensure that you create two types of profiles: an Endevor profile and an EBG profile. You can also specify these details in your team configuration file.
 
 **Note:** Skip the following procedures if you already have the required profiles.
 
@@ -62,7 +61,7 @@ The Bridge for Git Explorer extension uses credentials of your Endevor profile t
 
   2. Ensure that the profile has the same Endevor configuration that is used for the Git-Endevor mapping in your workspace. For more information about creating an Endevor profile, see [Endevor Plug-in for Zowe CLI](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-brightside/3-0/zowe-cli/available-cli-plug-ins/ca-endevor-scm-plug-in-for-zowe-cli.html) in the Broadcom documentation.
 
-     Alternatively, you can use an API ML base profile. For more information see [Base Profiles](https://docs.zowe.org/stable/user-guide/cli-usingcli/#base-profiles) on Zowe Docs.
+     Alternatively, you can use an API ML base profile. For more information see [Base Profiles](https://docs.zowe.org/stable/user-guide/cli-using-using-profiles/#base-profiles) on Zowe Docs.
 
 - Create an EBG profile with Git credentials.
 
@@ -95,6 +94,14 @@ Expand your Endevor inventory in the tree and proceed to work with the elements.
 4. Click an element to view its contents.
 
 5. (Optional) To see the location details of an element, hover over and right-click the element, and select **View details**.
+
+## Team Configuration File
+
+Bridge for Git Explorer supports reading a global team configuration (team config) file. Usually, a system administrator or team leader generates a team config file that contains information about the profiles you need to access certain services, such as Endevor and Bridge for Git. You can use global team configs with your team members to share information about your Endevor connections and Bridge for Git server. For more information about team config, see [Using Team Profiles](https://docs.zowe.org/stable/user-guide/cli-using-using-team-profiles) on Zowe Docs.
+
+As an application developer, you can obtain a shared global configuration file from your system administrator and use the file to access shared systems. As a system administrator, you need to have [Zowe CLI 7.2.1](https://docs.zowe.org/stable/user-guide/cli-installcli) or higher on your workstation before you create a team configuration file.
+
+> **Tip**: You can convert your existing Zowe CLI plug-ins V1 profiles into team configuration files with the `zowe config convert-profiles` command. For more information about team config conversion, see [Using Profiles](https://docs.zowe.org/stable/user-guide/cli-using-using-profiles/#important-information-about-team-profiles) on Zowe Docs.
 
 ## Use Cases
 
@@ -130,7 +137,7 @@ You can select and add an element with associated files to your synchronized map
 
 Right-click an element with dependencies you want to add and select **Add to Mapping With Dependencies**. As well as with the previous option, you can download an element to you cloned repository by issuing the `git pull` command.
 
-For more information about work-environment Git-Endevor mappings, see [Work with Synchronized Repositories](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-endevor-integrations-for-enterprise-devops/1-0/ca-endevor-bridge-for-git/use-the-ca-enterprise-git-bridge/work-with-git-endevor-mappings.html).
+For more information about work-environment Git-Endevor mappings, see [Work with Synchronized Repositories](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-endevor-integrations-for-enterprise-devops/1-0/ca-endevor-bridge-for-git/Using-ca-enterprise-git-bridge/work-with-git-endevor-mappings.html).
 
 ![Add to Mapping with Dependencies](images/BFGE-add-to-map-dep.gif?raw=true 'Add to mapping with dependencies')
 <br /><br />
