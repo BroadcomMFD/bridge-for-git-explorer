@@ -2,12 +2,12 @@
 
 This project leverages the following third party content.
 
-@broadcom/endevor-bridge-for-git-for-zowe-cli (2.5.0)
+@broadcom/endevor-bridge-for-git-rest-api (0.2.14)
 
 - License: Broadcom Internal
-- Project: https://www.npmjs.com/package/@broadcom/endevor-bridge-for-git-for-zowe-cli
+- Project: https://www.npmjs.com/package/@broadcom/endevor-bridge-for-git-rest-api
 
-@broadcom/endevor-for-zowe-cli (7.2.0)
+@broadcom/endevor-for-zowe-cli (7.5.0)
 
 - License: Broadcom Internal
 - Project: https://www.npmjs.com/package/@broadcom/endevor-for-zowe-cli
@@ -32,17 +32,7 @@ This project leverages the following third party content.
 - License: MIT
 - Project: https://www.npmjs.com/package/@nodelib/fs.walk
 
-@zowe/cli (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/cli
-
-@zowe/core-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/core-for-zowe-sdk
-
-@zowe/imperative (5.3.3)
+@zowe/imperative (5.18.0)
 
 - License: EPL-2.0
 - Project: https://www.npmjs.com/package/@zowe/imperative
@@ -52,57 +42,12 @@ This project leverages the following third party content.
 - License: EPL-2.0
 - Project: https://www.npmjs.com/package/@zowe/perf-timing
 
-@zowe/provisioning-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/provisioning-for-zowe-sdk
-
-@zowe/zos-console-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zos-console-for-zowe-sdk
-
-@zowe/zos-files-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zos-files-for-zowe-sdk
-
-@zowe/zos-jobs-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zos-jobs-for-zowe-sdk
-
-@zowe/zos-tso-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zos-tso-for-zowe-sdk
-
-@zowe/zos-uss-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zos-uss-for-zowe-sdk
-
-@zowe/zos-workflows-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zos-workflows-for-zowe-sdk
-
-@zowe/zosmf-for-zowe-sdk (7.2.3)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zosmf-for-zowe-sdk
-
-@zowe/zowe-explorer-api (2.2.1)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/zowe-explorer-api
-
 ansi-regex (5.0.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/ansi-regex
 
-ansi-styles (4.3.0)
+ansi-styles (5.2.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/ansi-styles
@@ -112,40 +57,20 @@ array-timsort (1.0.3)
 - License: MIT
 - Project: https://www.npmjs.com/package/array-timsort
 
-asn1 (0.2.6)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/asn1
-
 asynckit (0.4.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/asynckit
-
-balanced-match (1.0.2)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/balanced-match
-
-bcrypt-pbkdf (1.0.2)
-
-- License: BSD-3-Clause
-- Project: https://www.npmjs.com/package/bcrypt-pbkdf
-
-brace-expansion (1.1.11)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/brace-expansion
 
 braces (3.0.2)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/braces
 
-camelcase (5.3.1)
+busboy (1.6.0)
 
 - License: MIT
-- Project: https://www.npmjs.com/package/camelcase
+- Project: https://www.npmjs.com/package/busboy
 
 chalk (4.1.2)
 
@@ -157,7 +82,7 @@ cli-table3 (0.6.2)
 - License: MIT
 - Project: https://www.npmjs.com/package/cli-table3
 
-cliui (6.0.0)
+cliui (7.0.4)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/cliui
@@ -182,27 +107,27 @@ combined-stream (1.0.8)
 - License: MIT
 - Project: https://www.npmjs.com/package/combined-stream
 
-comment-json (4.1.0)
+comment-json (4.1.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/comment-json
-
-concat-map (0.0.1)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/concat-map
 
 core-util-is (1.0.3)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/core-util-is
 
+cross-spawn (7.0.3)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/cross-spawn
+
 dataobject-parser (1.2.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/dataobject-parser
 
-date-format (4.0.13)
+date-format (4.0.14)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/date-format
@@ -211,11 +136,6 @@ debug (4.3.4)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/debug
-
-decamelize (1.2.0)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/decamelize
 
 deepmerge (4.2.2)
 
@@ -227,10 +147,20 @@ delayed-stream (1.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/delayed-stream
 
-diff-sequences (27.0.6)
+diff (5.1.0)
+
+- License: BSD-3-Clause
+- Project: https://www.npmjs.com/package/diff
+
+diff-sequences (27.5.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/diff-sequences
+
+diff2html (3.4.20-usewontache.1.60e7a2e)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/diff2html
 
 emoji-regex (8.0.0)
 
@@ -242,10 +172,10 @@ entities (2.1.0)
 - License: BSD-2-Clause
 - Project: https://www.npmjs.com/package/entities
 
-escape-string-regexp (1.0.5)
+escalade (3.1.1)
 
 - License: MIT
-- Project: https://www.npmjs.com/package/escape-string-regexp
+- Project: https://www.npmjs.com/package/escalade
 
 esprima (4.0.1)
 
@@ -262,7 +192,7 @@ fastest-levenshtein (1.0.12)
 - License: MIT
 - Project: https://www.npmjs.com/package/fastest-levenshtein
 
-fastq (1.13.0)
+fastq (1.15.0)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/fastq
@@ -277,7 +207,7 @@ find-up (2.1.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/find-up
 
-flatted (3.2.6)
+flatted (3.2.7)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/flatted
@@ -287,7 +217,7 @@ form-data (2.5.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/form-data
 
-fp-ts (2.11.5)
+fp-ts (2.16.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/fp-ts
@@ -297,27 +227,17 @@ fs-extra (8.1.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/fs-extra
 
-fs.realpath (1.0.0)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/fs.realpath
-
 get-caller-file (2.0.5)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/get-caller-file
-
-glob (7.2.0)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/glob
 
 glob-parent (5.1.2)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/glob-parent
 
-graceful-fs (4.2.8)
+graceful-fs (4.2.11)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/graceful-fs
@@ -332,17 +252,7 @@ has-own-prop (2.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/has-own-prop
 
-inflight (1.0.6)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/inflight
-
-inherits (2.0.4)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/inherits
-
-io-ts (2.2.16)
+io-ts (2.2.20)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/io-ts
@@ -367,6 +277,11 @@ is-number (7.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/is-number
 
+isexe (2.0.0)
+
+- License: ISC
+- Project: https://www.npmjs.com/package/isexe
+
 jest-diff (27.0.6)
 
 - License: MIT
@@ -377,7 +292,7 @@ jest-get-type (27.5.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/jest-get-type
 
-js-yaml (3.14.1)
+js-yaml (4.1.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/js-yaml
@@ -437,7 +352,7 @@ merge2 (1.4.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/merge2
 
-micromatch (4.0.4)
+micromatch (4.0.5)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/micromatch
@@ -451,11 +366,6 @@ mime-types (2.1.35)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/mime-types
-
-minimatch (3.0.8)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/minimatch
 
 ms (2.1.2)
 
@@ -477,11 +387,6 @@ node-diff3 (2.1.2)
 - License: MIT
 - Project: https://www.npmjs.com/package/node-diff3
 
-once (1.4.0)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/once
-
 opener (1.5.2)
 
 - License: (WTFPL OR MIT)
@@ -502,17 +407,17 @@ p-try (1.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/p-try
 
-path-exists (3.0.0)
+path-exists (4.0.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/path-exists
 
-path-is-absolute (1.0.1)
+path-key (3.1.1)
 
 - License: MIT
-- Project: https://www.npmjs.com/package/path-is-absolute
+- Project: https://www.npmjs.com/package/path-key
 
-picomatch (2.3.0)
+picomatch (2.3.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/picomatch
@@ -572,11 +477,6 @@ require-directory (2.1.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/require-directory
 
-require-main-filename (2.0.0)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/require-main-filename
-
 reusify (1.0.4)
 
 - License: MIT
@@ -587,45 +487,45 @@ rfdc (1.3.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/rfdc
 
-rimraf (2.6.3)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/rimraf
-
 run-parallel (1.2.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/run-parallel
 
-safer-buffer (2.1.2)
+rxjs (7.4.0)
 
-- License: MIT
-- Project: https://www.npmjs.com/package/safer-buffer
+- License: Apache-2.0
+- Project: https://www.npmjs.com/package/rxjs
 
-semver (7.3.5)
+semver (7.5.2)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/semver
 
-set-blocking (2.0.0)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/set-blocking
-
-ssh2 (1.4.0)
+shebang-command (2.0.0)
 
 - License: MIT
-- Project: https://www.npmjs.com/package/ssh2
+- Project: https://www.npmjs.com/package/shebang-command
+
+shebang-regex (3.0.0)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/shebang-regex
 
 stack-trace (0.0.10)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/stack-trace
 
-streamroller (3.1.2)
+streamroller (3.1.5)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/streamroller
+
+streamsearch (1.1.0)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/streamsearch
 
 string-width (4.2.3)
 
@@ -647,42 +547,47 @@ to-regex-range (5.0.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/to-regex-range
 
-tweetnacl (0.14.5)
+ts-loader (9.4.4)
 
-- License: Unlicense
-- Project: https://www.npmjs.com/package/tweetnacl
+- License: MIT
+- Project: https://www.npmjs.com/package/ts-loader
 
 uc.micro (1.0.6)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/uc.micro
 
+underscore (1.13.6)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/underscore
+
+undici (5.23.0)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/undici
+
 universalify (0.1.2)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/universalify
 
-webpack (4.46.0)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/webpack
-
-which-module (2.0.0)
+which (2.0.2)
 
 - License: ISC
-- Project: https://www.npmjs.com/package/which-module
+- Project: https://www.npmjs.com/package/which
+
+wontache (0.1.0)
+
+- License: BSD-3-Clause
+- Project: https://www.npmjs.com/package/wontache
 
 wrap-ansi (7.0.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/wrap-ansi
 
-wrappy (1.0.2)
-
-- License: ISC
-- Project: https://www.npmjs.com/package/wrappy
-
-y18n (4.0.3)
+y18n (5.0.8)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/y18n
@@ -697,12 +602,12 @@ yamljs (0.3.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/yamljs
 
-yargs (15.3.1)
+yargs (16.2.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/yargs
 
-yargs-parser (18.1.3)
+yargs-parser (20.2.9)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/yargs-parser
