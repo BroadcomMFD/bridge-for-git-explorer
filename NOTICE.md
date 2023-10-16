@@ -2,12 +2,12 @@
 
 This project leverages the following third party content.
 
-@broadcom/endevor-bridge-for-git-rest-api (0.2.14)
+@broadcom/endevor-bridge-for-git-rest-api (0.2.16)
 
 - License: Broadcom Internal
 - Project: https://www.npmjs.com/package/@broadcom/endevor-bridge-for-git-rest-api
 
-@broadcom/endevor-for-zowe-cli (7.5.0)
+@broadcom/endevor-for-zowe-cli (7.5.1)
 
 - License: Broadcom Internal
 - Project: https://www.npmjs.com/package/@broadcom/endevor-for-zowe-cli
@@ -16,6 +16,11 @@ This project leverages the following third party content.
 
 - License: MIT
 - Project: https://www.npmjs.com/package/@colors/colors
+
+@fastify/busboy (2.0.0)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/@fastify/busboy
 
 @nodelib/fs.scandir (2.1.5)
 
@@ -32,7 +37,7 @@ This project leverages the following third party content.
 - License: MIT
 - Project: https://www.npmjs.com/package/@nodelib/fs.walk
 
-@zowe/imperative (5.18.0)
+@zowe/imperative (5.18.2)
 
 - License: EPL-2.0
 - Project: https://www.npmjs.com/package/@zowe/imperative
@@ -66,11 +71,6 @@ braces (3.0.2)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/braces
-
-busboy (1.6.0)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/busboy
 
 chalk (4.1.2)
 
@@ -302,7 +302,7 @@ jsonfile (4.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/jsonfile
 
-jsonschema (1.1.1)
+jsonschema (1.4.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/jsonschema
@@ -522,11 +522,6 @@ streamroller (3.1.5)
 - License: MIT
 - Project: https://www.npmjs.com/package/streamroller
 
-streamsearch (1.1.0)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/streamsearch
-
 string-width (4.2.3)
 
 - License: MIT
@@ -537,7 +532,7 @@ strip-ansi (6.0.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/strip-ansi
 
-supports-color (7.2.0)
+supports-color (8.1.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/supports-color
@@ -547,7 +542,7 @@ to-regex-range (5.0.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/to-regex-range
 
-ts-loader (9.4.4)
+ts-loader (9.5.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/ts-loader
@@ -562,7 +557,7 @@ underscore (1.13.6)
 - License: MIT
 - Project: https://www.npmjs.com/package/underscore
 
-undici (5.23.0)
+undici (5.26.3)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/undici
