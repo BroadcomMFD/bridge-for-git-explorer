@@ -2,7 +2,7 @@
 
 <div id="header" align="center">
 
-[![Version](https://img.shields.io/badge/version-0.4.0-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
+[![Version](https://img.shields.io/badge/version-0.5.0-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
 ![Downloads](https://img.shields.io/visual-studio-marketplace/d/broadcomMFD.bridge-for-git-explorer)
 [![Support](https://img.shields.io/badge/Broadcom-support-red)](https://www.broadcom.com/support)
 
@@ -10,13 +10,14 @@
 
 Bridge for Git Explorer enables you to work with work-environment Git-Endevor mappings that are synchronized with Endevor using Endevor Bridge for Git. When you work with a work-environment mapping, you may need to add elements from up the Endevor map back to your mapping. Bridge for Git Explorer reads the information about the mapping that you cloned in your VS Code workspace and provides a list of elements from up the map for a specified Endevor inventory location.
 
-The extension includes the following features:
+The extension enables developers working with Bridge for Git mappings to:
 
-- Add elements to mappings
-- Add elements with dependencies to mappings
-- See history of changes in elements
-- View Bridge for Git mapping activity
-- Specify processor groups for elements
+- Configure the pre-push hook
+- Add elements to their mapping
+- Add elements with dependencies to their mapping
+- See the history of changes to elements
+- View the activity of their mapping
+- Specify processor groups for elements in their mapping
 
 ## Table of Contents
 
@@ -25,6 +26,7 @@ The extension includes the following features:
   - [Work with Elements](#work-with-elements)
 - [Team Configuration File](#team-configuration-file)
 - [Use Cases](#use-cases)
+  - [Configure the Pre-push Hook](#configure-the-pre-push-hook)
   - [Add to Mapping](#add-to-mapping)
   - [Add to Mapping with Dependencies](#add-to-mapping-with-dependencies)
   - [Show History](#show-history)
@@ -46,7 +48,7 @@ Ensure that you meet the following host-side and client-side software requiremen
 
 **Client-side prerequisites:**
 
-- Install Visual Studio Code.
+- Install Visual Studio Code 1.82 or higher.
 - Access to either Endevor version 18.0.12 with the SO09580 and SO09581 PTFs or Endevor version 18.1 with the SO15978 PTF.
 - Access to Bridge for Git version 2.13 or higher.
 - Cloned and opened synchronized Git-Endevor mapping in the VS Code workspace. For more information, see [Access and Clone a Synchronized Repository](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-endevor-integrations-for-enterprise-devops/1-0/ca-endevor-bridge-for-git/Using-ca-enterprise-git-bridge/access-and-clone-an-initialized-git-endevor-mapping.html) in the Broadcom documentation.
@@ -55,12 +57,11 @@ Ensure that you meet the following host-side and client-side software requiremen
 
 Ensure that you have a Git-Endevor mapping in your VS Code workspace to start working with the extension. Review the use cases to see how you can use the full potential of Bridge for Git Explorer.
 
-With the 0.4.0 release, Bridge for Git Explorer introduces the following benefits:
+With the 0.5.0 release, Bridge for Git Explorer introduces the following features:
 
-- Improved experience with profiles
-- Ability to view the Bridge for Git mapping activity
-- Ability to view the history of elements up the map
-- Functionality that enables you to specify processor groups for elements
+- Configuration of the pre-push hook for a mapping
+- Ability to view the full details of mapping activity operations
+- Ability to specify a processor group for newly created elements in the mapping
 
 The extension continually supports Zowe V1 profiles and team configuration files that contain your Endevor Connection details and Bridge for Git server credentials. However, you do not need to have these types of profiles to work with the extension. If you do not have Zowe V1 profiles or team configuration files, the extension prompts you to specify missing values. In this scenario, the specified values are stored till the end of the VS Code session only.
 
@@ -94,11 +95,22 @@ As an application developer, you can obtain a shared global configuration file f
 
 Review the following use cases to familiarize yourself with the available features of the extension:
 
+- [Configure the pre-push hook](#configure-the-pre-push-hook): Ensure your local changes are validated before pushing to your git server.
 - [Add to mapping](#add-to-mapping): You can add an element from your workstation to the synchronized mapping.
 - [Add to mapping with dependencies](#add-to-mapping-with-dependencies): You can add an element with associated files from your workstation to the synchronized mapping.
 - [Show history](#show-history): You can view the history of the elements up the map in your mapping.
 - [Specify processor groups for elements](#specify-processor-groups-for-elements): You can specify a processor group for an element that you can use for the Generate action.
 - [Review Mapping Activity](#review-mapping-activity): Review the events that occur in and the status of your mapping.
+
+### Configure the Pre-push Hook
+
+Bridge for Git mappings include a pre-push hook. The pre-push hook validates changes to elements in the repo against changesets in the git server and Endevor. The pre-push hook specifically looks at the fingerprints of the element, the type, the name, and the location in the folder structure. If your changes are out of date (fingerprint does not match) or any of the file or location conventions are not met, then the pre-push hook will prevent you from pushing to the git server.
+
+We recommend that you install the pre-push hook when you start working with a mapping.
+
+When you have a Bridge for Git mapping open in your workspace, Bridge for Git Explorer prompts you to install the pre-push hook. Ensure that you provide your git username or PAT, depending on your configuration of Bridge for Git.
+
+For more information about how to set up pre-push hooks, see [Set up Hooks](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/2-0/using/set-up-hooks.html).
 
 ### Add to Mapping
 
@@ -157,7 +169,7 @@ Review the history of the elements from up the map in your mapping to identify c
 
 ### Specify Processor Groups for Elements
 
-Specify a processor group for an element.
+Specify a processor group for an element. You can specify a processor group for existing and newly created elements in your mapping.
 
 1. Open your workspace in VS Code.
 
@@ -185,7 +197,11 @@ For example, you can review whether a newly added element is already in your map
 
 2. Navigate to the **Bridge for Git Mapping Activity** section.
 
-3. Check the status of the repository.
+3. Scroll through the operations for the mapping and optionally right+click and select **View Operation Details** for a particular entry.
+
+   If there are any errors with the operation, the details will provide you with actionable information.
+
+4. Check the status of the repository.
 
    If the added element is in the repository already, you can pull the element back to your cloned repository.
 
@@ -223,4 +239,4 @@ Note: To receive technical assistance and support, you must remain compliant wit
 
 ---
 
-Copyright © 2023 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
+Copyright © 2024 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.

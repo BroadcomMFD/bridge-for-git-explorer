@@ -2,12 +2,12 @@
 
 This project leverages the following third party content.
 
-@broadcom/endevor-bridge-for-git-rest-api (0.2.16)
+@broadcom/endevor-bridge-for-git-rest-api (0.2.21)
 
 - License: Broadcom Internal
 - Project: https://www.npmjs.com/package/@broadcom/endevor-bridge-for-git-rest-api
 
-@broadcom/endevor-for-zowe-cli (7.5.1)
+@broadcom/endevor-for-zowe-cli (7.7.6)
 
 - License: Broadcom Internal
 - Project: https://www.npmjs.com/package/@broadcom/endevor-for-zowe-cli
@@ -37,15 +37,10 @@ This project leverages the following third party content.
 - License: MIT
 - Project: https://www.npmjs.com/package/@nodelib/fs.walk
 
-@zowe/imperative (5.18.2)
+@zowe/imperative (5.22.3)
 
 - License: EPL-2.0
 - Project: https://www.npmjs.com/package/@zowe/imperative
-
-@zowe/perf-timing (1.0.7)
-
-- License: EPL-2.0
-- Project: https://www.npmjs.com/package/@zowe/perf-timing
 
 ansi-regex (5.0.1)
 
@@ -67,7 +62,7 @@ asynckit (0.4.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/asynckit
 
-braces (3.0.2)
+braces (3.0.3)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/braces
@@ -197,12 +192,12 @@ fastq (1.15.0)
 - License: ISC
 - Project: https://www.npmjs.com/package/fastq
 
-fill-range (7.0.1)
+fill-range (7.1.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/fill-range
 
-find-up (2.1.0)
+find-up (4.1.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/find-up
@@ -217,7 +212,7 @@ form-data (2.5.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/form-data
 
-fp-ts (2.16.1)
+fp-ts (2.16.6)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/fp-ts
@@ -252,7 +247,7 @@ has-own-prop (2.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/has-own-prop
 
-io-ts (2.2.20)
+io-ts (2.2.21)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/io-ts
@@ -277,7 +272,7 @@ is-number (7.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/is-number
 
-isexe (2.0.0)
+isexe (3.1.1)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/isexe
@@ -312,7 +307,7 @@ linkify-it (3.0.3)
 - License: MIT
 - Project: https://www.npmjs.com/package/linkify-it
 
-locate-path (2.0.0)
+locate-path (5.0.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/locate-path
@@ -372,7 +367,7 @@ ms (2.1.2)
 - License: MIT
 - Project: https://www.npmjs.com/package/ms
 
-mustache (2.3.0)
+mustache (4.2.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/mustache
@@ -392,17 +387,17 @@ opener (1.5.2)
 - License: (WTFPL OR MIT)
 - Project: https://www.npmjs.com/package/opener
 
-p-limit (1.3.0)
+p-limit (2.3.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/p-limit
 
-p-locate (2.0.0)
+p-locate (4.1.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/p-locate
 
-p-try (1.0.0)
+p-try (2.2.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/p-try
@@ -421,11 +416,6 @@ picomatch (2.3.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/picomatch
-
-pkg-up (2.0.0)
-
-- License: MIT
-- Project: https://www.npmjs.com/package/pkg-up
 
 pretty-format (27.5.1)
 
@@ -497,7 +487,7 @@ rxjs (7.4.0)
 - License: Apache-2.0
 - Project: https://www.npmjs.com/package/rxjs
 
-semver (7.5.2)
+semver (7.5.4)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/semver
@@ -542,7 +532,7 @@ to-regex-range (5.0.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/to-regex-range
 
-ts-loader (9.5.0)
+ts-loader (9.5.1)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/ts-loader
@@ -557,7 +547,7 @@ underscore (1.13.6)
 - License: MIT
 - Project: https://www.npmjs.com/package/underscore
 
-undici (5.26.3)
+undici (5.28.4)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/undici

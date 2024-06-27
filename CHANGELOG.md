@@ -2,6 +2,24 @@
 
 You can find all notable changes to Bridge For Git Explorer in this document.
 
+## [0.5.0] &ndash; 2024-06-24
+
+### Added
+
+- Added a Git Pre-push hook installation detection. You can now automatically install a Git Pre-push hook for a mapping or you can skip installation.
+- Added an ability to see a detailed message for each of the status records in the Mapping Activity view.
+
+### Fixed
+
+- Fixed an issue that prevented the Update Processor Group action on the elements, that were newly added to the mapping, from using.
+- Fixed an issue with the flickering of the Welcome message in the Elements view during the extension initialization.
+- Fixed an issue that led to performance degradation during git branch switching.
+
+### Changed
+
+- Mapping Activity view default location is changed to the bottom panel.
+- Changed the VSCode version requirement. Ensure that you use VSCode 1.82.0 or higher.
+
 ## [0.4.1] &ndash; 2023-10-16
 
 ### Added
