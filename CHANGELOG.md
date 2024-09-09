@@ -2,6 +2,23 @@
 
 You can find all notable changes to Bridge For Git Explorer in this document.
 
+## [0.5.2] &ndash; 2024-09-09
+
+### Fixed
+
+- Fixed the 'read our documentation' link in the Bridge for Git Explorer welcome view.
+- Fixed an issue that prevented the blame lines from being rendered in the Element change level comparing tabs.
+
+## [0.5.1] &ndash; 2024-07-15
+
+### Added
+
+- Added a Git Pre-push hook un-installation ability. You can also uninstall or re-install the Pre-push hook for a particular mapping.
+
+### Changed
+
+- Adjust Git Pre-push hook installation indication and messages.
+
 ## [0.5.0] &ndash; 2024-06-24
 
 ### Added

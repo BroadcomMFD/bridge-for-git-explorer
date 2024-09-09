@@ -37,10 +37,15 @@ This project leverages the following third party content.
 - License: MIT
 - Project: https://www.npmjs.com/package/@nodelib/fs.walk
 
-@zowe/imperative (5.22.3)
+@zowe/imperative (5.27.0)
 
 - License: EPL-2.0
 - Project: https://www.npmjs.com/package/@zowe/imperative
+
+agent-base (7.1.1)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/agent-base
 
 ansi-regex (5.0.1)
 
@@ -117,7 +122,7 @@ cross-spawn (7.0.3)
 - License: MIT
 - Project: https://www.npmjs.com/package/cross-spawn
 
-dataobject-parser (1.2.1)
+dataobject-parser (1.2.25)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/dataobject-parser
@@ -127,7 +132,7 @@ date-format (4.0.14)
 - License: MIT
 - Project: https://www.npmjs.com/package/date-format
 
-debug (4.3.4)
+debug (4.3.6)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/debug
@@ -162,12 +167,12 @@ emoji-regex (8.0.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/emoji-regex
 
-entities (2.1.0)
+entities (4.5.0)
 
 - License: BSD-2-Clause
 - Project: https://www.npmjs.com/package/entities
 
-escalade (3.1.1)
+escalade (3.2.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/escalade
@@ -202,7 +207,7 @@ find-up (4.1.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/find-up
 
-flatted (3.2.7)
+flatted (3.3.1)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/flatted
@@ -212,7 +217,7 @@ form-data (2.5.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/form-data
 
-fp-ts (2.16.6)
+fp-ts (2.16.9)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/fp-ts
@@ -246,6 +251,16 @@ has-own-prop (2.0.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/has-own-prop
+
+http-proxy-agent (7.0.2)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/http-proxy-agent
+
+https-proxy-agent (7.0.4)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/https-proxy-agent
 
 io-ts (2.2.21)
 
@@ -302,7 +317,7 @@ jsonschema (1.4.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/jsonschema
 
-linkify-it (3.0.3)
+linkify-it (5.0.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/linkify-it
@@ -332,12 +347,12 @@ lru-cache (6.0.0)
 - License: ISC
 - Project: https://www.npmjs.com/package/lru-cache
 
-markdown-it (12.3.2)
+markdown-it (14.1.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/markdown-it
 
-mdurl (1.0.1)
+mdurl (2.0.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/mdurl
@@ -436,6 +451,11 @@ promise-pool-tool (1.3.3)
 
 - License: ISC
 - Project: https://www.npmjs.com/package/promise-pool-tool
+
+punycode.js (2.3.1)
+
+- License: MIT
+- Project: https://www.npmjs.com/package/punycode.js
 
 queue-microtask (1.2.3)
 
@@ -537,7 +557,7 @@ ts-loader (9.5.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/ts-loader
 
-uc.micro (1.0.6)
+uc.micro (2.1.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/uc.micro
