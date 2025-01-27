@@ -2,7 +2,7 @@
 
 <div id="header" align="center">
 
-[![Version](https://img.shields.io/badge/version-0.5.2-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
+[![Version](https://img.shields.io/badge/version-0.5.3-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
 ![Downloads](https://img.shields.io/visual-studio-marketplace/d/broadcomMFD.bridge-for-git-explorer)
 [![Support](https://img.shields.io/badge/Broadcom-support-red)](https://www.broadcom.com/support)
 
@@ -276,4 +276,4 @@ Note: To receive technical assistance and support, you must remain compliant wit
 
 ---
 
-Copyright © 2024 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
+Copyright © 2025 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.

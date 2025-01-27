@@ -37,12 +37,12 @@ This project leverages the following third party content.
 - License: MIT
 - Project: https://www.npmjs.com/package/@nodelib/fs.walk
 
-@zowe/imperative (5.27.0)
+@zowe/imperative (5.27.6)
 
 - License: EPL-2.0
 - Project: https://www.npmjs.com/package/@zowe/imperative
 
-agent-base (7.1.1)
+agent-base (7.1.3)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/agent-base
@@ -66,6 +66,11 @@ asynckit (0.4.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/asynckit
+
+at-least-node (1.0.0)
+
+- License: ISC
+- Project: https://www.npmjs.com/package/at-least-node
 
 braces (3.0.3)
 
@@ -117,7 +122,7 @@ core-util-is (1.0.3)
 - License: MIT
 - Project: https://www.npmjs.com/package/core-util-is
 
-cross-spawn (7.0.3)
+cross-spawn (7.0.6)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/cross-spawn
@@ -262,7 +267,7 @@ https-proxy-agent (7.0.4)
 - License: MIT
 - Project: https://www.npmjs.com/package/https-proxy-agent
 
-io-ts (2.2.21)
+io-ts (2.2.22)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/io-ts
@@ -307,7 +312,7 @@ js-yaml (4.1.0)
 - License: MIT
 - Project: https://www.npmjs.com/package/js-yaml
 
-jsonfile (4.0.0)
+jsonfile (6.1.0)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/jsonfile
@@ -362,7 +367,7 @@ merge2 (1.4.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/merge2
 
-micromatch (4.0.5)
+micromatch (4.0.8)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/micromatch
@@ -552,7 +557,7 @@ to-regex-range (5.0.1)
 - License: MIT
 - Project: https://www.npmjs.com/package/to-regex-range
 
-ts-loader (9.5.1)
+ts-loader (9.5.2)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/ts-loader
@@ -567,7 +572,7 @@ underscore (1.13.6)
 - License: MIT
 - Project: https://www.npmjs.com/package/underscore
 
-undici (5.28.4)
+undici (5.28.5)
 
 - License: MIT
 - Project: https://www.npmjs.com/package/undici

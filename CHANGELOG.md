@@ -2,6 +2,16 @@
 
 You can find all notable changes to Bridge For Git Explorer in this document.
 
+## [0.5.3] &ndash; 2025-01-27
+
+### Added
+
+- Added tooltips for element and branch nodes with information about Endevor inventory and mapping.
+
+### Fixed
+
+- Fixed an issue that prevented elements from being added to the mapping when multiple target locations are available.
+
 ## [0.5.2] &ndash; 2024-09-09
 
 ### Fixed
