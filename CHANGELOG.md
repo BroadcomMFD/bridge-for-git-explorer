@@ -2,6 +2,18 @@
 
 You can find all notable changes to Bridge For Git Explorer in this document.
 
+## [0.6.0] &ndash; 2025-10-24
+
+### Added
+
+- Added compatibility with Bridge for Git 3.0.
+- Added Bridge for Git aliases support.
+- Mapping Activity setting that enables you to specify the number of operations to list.
+
+### Changed
+
+- Mapping Activity view changed to show repositories instead of branch nodes. Listed operations now include the operations of the entire mapping (unlike operations in separate branches).
+
 ## [0.5.3] &ndash; 2025-01-27
 
 ### Added

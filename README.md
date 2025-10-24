@@ -2,13 +2,13 @@
 
 <div id="header" align="center">
 
-[![Version](https://img.shields.io/badge/version-0.5.3-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
-![Downloads](https://img.shields.io/visual-studio-marketplace/d/broadcomMFD.bridge-for-git-explorer)
+[![Version](https://img.shields.io/badge/version-0.6.0-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
+[![Installs](https://img.shields.io/badge/installs-1.9k+-blue)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer)
 [![Support](https://img.shields.io/badge/Broadcom-support-red)](https://www.broadcom.com/support)
 
 </div>
 
-Bridge for Git Explorer enables you to work with work-environment Git-Endevor mappings that are synchronized with Endevor using Endevor Bridge for Git. When you work with a work-environment mapping, you may need to add elements from up the Endevor map back to your mapping. Bridge for Git Explorer reads the information about the mapping that you cloned in your VS Code workspace and provides a list of elements from up the map for a specified Endevor inventory location.
+Bridge for Git Explorer enables you to work with work-environment Git-Endevor mappings that are synchronized with Endevor using Endevor Bridge for Git (BFG). When you work with a work-environment mapping, you may need to add elements from up the Endevor map back to your mapping. Bridge for Git Explorer reads the information about the mapping that you cloned in your VS Code workspace and provides a list of elements from up the map for a specified Endevor inventory location.
 
 The extension enables developers working with Bridge for Git mappings to:
 
@@ -21,11 +21,11 @@ The extension enables developers working with Bridge for Git mappings to:
 
 ## Table of Contents
 
+- [Announcements and News](#announcements-and-news)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-  - [Create Profiles](#create-profiles)
+  - [(Optional) Use Team Config to Manage Profiles](#optional-use-team-config-to-manage-profiles)
   - [Work with Elements](#work-with-elements)
-- [Team Configuration File](#team-configuration-file)
 - [Use Cases](#use-cases)
   - [Configure the Pre-push Hook](#configure-the-pre-push-hook)
   - [Add to Mapping](#add-to-mapping)
@@ -37,6 +37,15 @@ The extension enables developers working with Bridge for Git mappings to:
 - [Troubleshooting](#troubleshooting)
 - [Technical Assistance and Support](#technical-assistance-and-support)
 
+## Announcements and News
+
+> Bridge for Git Explorer 0.6.0 is the last version of a standalone extension that will be deprecated soon. You will be able to use all functionality of the extension as part of the [Explorer for Endevor](https://marketplace.visualstudio.com/items?itemName=broadcomMFD.explorer-for-endevor) 2.0 features (yet to be released).
+
+- Version 0.6.0 the extension is compatible with Bridge for Git 3.0. For more information, see [Bridge for Git documentation](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0.html) on TechDocs.
+- Added Bridge for Git aliases support. Aliases are useful when you have multiple branches that are mapped to differently named systems or subsystems that point to the same inventory up the map. For more information, see the _Use Aliases for Multi-branching_ section in the [Create and Initialize a Git-Endevor Mapping](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0/administrating/mapping-administration/create-and-initialize-a-git-endevor-mapping.html) article on TechDocs.
+- Zowe CLI V1 profile support was removed. Instead you can use Zowe V2 and V3-based team configuration (team config) files to store your Bridge for Git and Endevor credentials. Zowe V2 and V3-based team configs are the optional feature and are not required for the extension to work.
+- Mapping activity operations limit setting is added. You can now set a limit to the number of mapping activity operations. The default value is 100. For more information, see [Review Mapping Activity](#review-mapping-activity).
+
 ## Prerequisites
 
 Ensure that you meet the following host-side and client-side software requirements before you use Bridge for Git Explorer:
@@ -45,68 +54,121 @@ Ensure that you meet the following host-side and client-side software requiremen
 
 - Install either Endevor version 18.0.12 with the SO09580 and SO09581 PTFs or Endevor version 18.1 with the SO15978 PTF.
 - Install Endevor Web Services.
-- Install [Endevor Bridge for Git](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/2-0/installing.html).
+- Install [Endevor Bridge for Git](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0/installing.html).
 
 **Client-side prerequisites:**
 
 - Install Visual Studio Code 1.82 or higher.
 - Access to either Endevor version 18.0.12 with the SO09580 and SO09581 PTFs or Endevor version 18.1 with the SO15978 PTF.
 - Access to Bridge for Git version 2.13 or higher.
-- Cloned and opened synchronized Git-Endevor mapping in the VS Code workspace. For more information, see [Access and Clone a Git-Endevor Mapping](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/2-0/using/access-and-clone-an-initialized-git-endevor-mapping.html) in the Broadcom documentation.
 
 ## Getting Started
 
-Ensure that you have a Git-Endevor mapping in your VS Code workspace to start working with the extension. Review the use cases to see how you can use the full potential of Bridge for Git Explorer.
+Before you can work with the extension, ensure that you meet the following prerequisites:
 
-With the 0.5.0 release, Bridge for Git Explorer introduces the following features:
+1. Create at least one Git-Endevor mapping. For more information, see [Access and Clone a Git-Endevor Mapping](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0/using/access-and-clone-an-initialized-git-endevor-mapping.html) on TechDocs.
 
-- Configuration of the pre-push hook for a mapping
-- Ability to view the full details of mapping activity operations
-- Ability to specify a processor group for newly created elements in the mapping
+2. Prepare the following credentials per mapping:
 
-### Create Profiles
+   **Endevor connection:**
 
-In order to start working with Bridge for Git Explorer, the following access information is required by the extension to work with your mapping:
+   - Mainframe userid and password
 
-- Your Endevor credentials for the Endevor Connection used by the mapping
-- Your git server Personal Access Token (PAT)
+   **Endevor Bridge for Git:**
 
-This access information can be predefined in Zowe V1 profiles and Zowe V2 team configuration (team config) files. However, you do not need to have these types of profiles to work with the extension. If you do not have Zowe profiles or team config files, the extension prompts you to specify missing values. In this scenario, the specified values are stored until the end of the VS Code session only.
+   - Your git server user name and Personal Access Token (PAT)
 
-**Note:** Credentials from existing Zowe profiles and team config files persist between Bridge for Git Explorer sessions.
+     For more information on how to obtain a PAT, see the _Personal Access Tokens_ section in [Authentication Methods](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0/installing/set-up-git-server-communication/authentication-methods.html) on TechDocs.
 
-If you are considering using Zowe profiles, ensure that you create two types of profiles: an Endevor profile and an EBG profile.
+To start working with the extension, open your Git-Endevor mapping(s) in your VS Code workspace.
 
-**Note:** Skip the following procedures if you already have the required profiles or you are not planning to use the profile configuration or Zowe at all.
+1. Open available Git-Endevor mapping(s) using VSC.
 
-- Create an Endevor profile.
+   You should see your branches in the Bridge for Git Explorer view of the extension (the section that is next to the default Activity Bar position).
 
-  1. Use the following Zowe CLI command to create an Endevor profile:
+2. Click the branch to expand your synchronized Endevor inventory location.
 
-     ```shell
-     zowe profiles create endevor <profile name> --protocol http(s) --host <hostname> --port <port number> --user <endevor username> --password <endevor pwd>
-     ```
+   You are prompted to enter your Endevor connection credentials.
 
-  2. Ensure that the profile has the same Endevor configuration that is used for the Git-Endevor mapping in your workspace. For more information about creating an Endevor profile, see [Endevor Plug-in for Zowe CLI](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/ca-brightside/3-0/zowe-cli/available-cli-plug-ins/ca-endevor-scm-plug-in-for-zowe-cli.html) in the Broadcom documentation.
-     Alternatively, you can use an API ML base profile. For more information see [Base Profiles](https://docs.zowe.org/stable/user-guide/cli-using-using-profiles-v1/#base-profiles) on Zowe Docs.
+   **Notes:**
 
-- Create an EBG profile with Git credentials.
+   - When necessary, you are prompted for your Endevor connection and Endevor Bridge for Git (EBG) credentials.
 
-  1. Use the following Zowe CLI command to create an Endevor profile:
+   - (Optional) If you store Endevor connection and EBG credentials in Zowe team config, VSC persists these credentials for every active session.
 
-     ```shell
-     zowe profiles create ebg <profile_name> --protocol http(s) --host <hostname> --port <port number> --user <git_user> --token <personal_access_token>
-     ```
+   - Endevor connection credentials enable you to expand branches in the Bridge for Git Explorer view, and EBG credentials enable the majority of features (functionalities).
 
-  2. Ensure that the profile contains the same information for the Bridge for Git server you used to create the mapping. For more information about creating an Endevor Bridge for Git profile, see [Endevor Bridge for Git Plug-in for Zowe CLI](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/2-0/integrating/ca-endevor-bridge-for-git-plug-in-for-zowe-cli.html) in the Broadcom documentation.
+You can now work with your mapping.
 
-You now can access your work-environment mapping in your workspace and start to use the extension.
+Review the [use cases](#use-cases) to see how you can use the full potential of Bridge for Git Explorer.
+
+### (Optional) Use Team Config to Manage Profiles
+
+You can pre-define your Endevor connection access information in Zowe V2 and Zowe V3 team configuration (team config) files. Credentials and profile details from team config files persist between Bridge for Git Explorer sessions.
+
+In the context of team config, "profiles" are a set of properties (like `host`, `port`, `user`, etc.. ) that Endevor connection and Bridge for Git include.
+
+**Tip:** Team config enables team leaders to share multiple Endevor connection and EGB profiles to use Git-Endevor mappings across development teams.
+
+To modify your team `zowe.config.json` file, navigate to the `.zowe` folder in your user home directory. Ensure that you edit the team config, using your Endevor connection and BFG details.
+
+For more information on how to store profiles in a team config file, see [Editing Team Configurations](https://docs.zowe.org/stable/user-guide/cli-using-editing-team-configuration) on Zowe Docs.
+
+**Note:** You might need to request the user information from the team leader that maintains BFG in your organization.
+
+**Example: EBG profile in a `zowe.config.json` file**
+
+```json
+"$schema": "./zowe.schema.json",
+"profiles": {
+  "bfg_profile_name": {
+     "type": "ebg",
+     "properties": {
+        "protocol": "https",
+        "host": "your.host.net",
+        "port": 8080,
+        "user": "username",
+        "token": ""
+     },
+     "secure": []
+  }
+}
+```
+
+where
+
+- `bfg` is the name of your Bridge for Git profile.
+
+  **Note:** Ensure that `host` and `port` match the `host` and `port` that are specified in the `url` of your `mapping.json` in the `.ebg` folder.
+
+- `token` is a PAT for your Enterprise git server.
+
+  For more information, see [Authentication Methods](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0/installing/set-up-git-server-communication/authentication-methods.html) on TechDocs.
+
+**Example: Endevor connection in a `zowe.config.json` file**
+
+```json
+"$schema": "./zowe.schema.json",
+"profiles": {
+  "endevor_connection_name": {
+     "type": "endevor",
+     "properties": {
+        "host": "your.host.net",
+        "port": 8080,
+        "protocol": "https",
+        "basePath": "/WebService/api/v2/",
+        "user": "username",
+        "password": "password",
+        "rejectUnauthorized": false
+     },
+     "secure": []
+  }
+}
+```
 
 ### Work with Elements
 
 Expand your Endevor inventory in the tree and proceed to work with the elements.
-
-**Follow these steps:**
 
 1. Click the Bridge for Git Explorer icon in the Activity Bar.
 
@@ -119,12 +181,6 @@ Expand your Endevor inventory in the tree and proceed to work with the elements.
 4. Click an element to view its contents.
 
 5. (Optional) To see the location details of an element, hover over and right-click the element, and select **View details**.
-
-## Team Configuration File
-
-Bridge for Git Explorer supports reading a global team configuration (team config) file. Usually, a system administrator or team leader generates a team config file that contains information about the profiles you need to access certain services, such as Endevor and Bridge for Git. You can use global team configs with your team members to share information about your Endevor connections and Bridge for Git server. For more information about team config, see [Using Team Profiles](https://docs.zowe.org/stable/user-guide/cli-using-using-team-profiles) on Zowe Docs.
-
-As an application developer, you can obtain a shared global configuration file from your system administrator and use the file to access shared systems. As a system administrator, ensure that you install [Zowe CLI](https://docs.zowe.org/stable/user-guide/cli-installcli) on your workstation before you create a team configuration file.
 
 ## Use Cases
 
@@ -143,11 +199,11 @@ Bridge for Git mappings include a pre-push hook. The pre-push hook validates cha
 
 We recommend that you install the pre-push hook when you start working with a mapping.
 
-When you have a Bridge for Git mapping open in your workspace, Bridge for Git Explorer prompts you to install the pre-push hook. Ensure that you provide your git username or PAT, depending on your configuration of Bridge for Git.
+When you have a Bridge for Git mapping open in your workspace, Bridge for Git Explorer prompts you to install the pre-push hook. Ensure that you provide your git user name or PAT, depending on your configuration of Bridge for Git.
 
 You can additionally uninstall the pre-push if needed through the command palette.
 
-For more information about how to set up pre-push hooks, see [Set up Hooks](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/2-0/using/set-up-hooks.html).
+For more information about how to set up pre-push hooks, see [Set up Hooks](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0/using/work-with-git-to-endevor-mappings/set-up-commit-validation-hooks.html).
 
 ### Add to Mapping
 
@@ -184,7 +240,7 @@ Right-click an element with dependencies you want to add and select **Add to Map
 
 As well as with the previous option, you can download an element to your cloned repository by pulling the element, using the in-built git VS Code **Pull** option or by issuing the `git pull` command in your terminal.
 
-For more information about work-environment Git-Endevor mappings, see [Work with Git to Endevor Mappings](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/2-0/using/work-with-git-to-endevor-mappings.html).
+For more information about work-environment Git-Endevor mappings, see [Work with Git to Endevor Mappings](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/endevor-bridge-for-git/3-0/using/work-with-git-to-endevor-mappings.html).
 
 ![Add to Mapping with Dependencies](images/BFGE-add-to-map-dep.gif?raw=true 'Add to mapping with dependencies')
 <br /><br />
@@ -234,13 +290,15 @@ For example, you can review whether a newly added element is already in your map
 
 2. Navigate to the **Bridge for Git Mapping Activity** section.
 
-3. Scroll through the operations for the mapping and optionally right+click and select **View Operation Details** for a particular entry.
+3. Scroll through the operations for the mapping and optionally right-click and select **View Operation Details** for a particular entry.
 
-   If there are any errors with the operation, the details will provide you with actionable information.
+   If errors occurred, you can see the details with possible solutions.
 
 4. Check the status of the repository.
 
    If the added element is in the repository already, you can pull the element back to your cloned repository.
+
+You can also set a limit to the number of operations to list in the Mapping Activity section. By default, the number of operations is 100. To change this limit, navigate to VSC **Settings** > **Extensions** > **Bridge for Git Explorer**.
 
 ## Usage Tips
 
