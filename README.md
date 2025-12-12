@@ -2,7 +2,7 @@
 
 <div id="header" align="center">
 
-[![Version](https://img.shields.io/badge/version-0.6.0-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
+[![Version](https://img.shields.io/badge/version-0.6.1-brightgreen)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer/changelog)
 [![Installs](https://img.shields.io/badge/installs-1.9k+-blue)](https://marketplace.visualstudio.com/items/broadcomMFD.bridge-for-git-explorer)
 [![Support](https://img.shields.io/badge/Broadcom-support-red)](https://www.broadcom.com/support)
 

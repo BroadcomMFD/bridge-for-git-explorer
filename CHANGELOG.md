@@ -2,6 +2,12 @@
 
 You can find all notable changes to Bridge For Git Explorer in this document.
 
+## [0.6.1] &ndash; 2025-12-12
+
+### Fixed
+
+- Fixed an issue that prevented any extension function from being automatically re-invoked if a certificate error occurs and **Disable and Retry** was selected.
+
 ## [0.6.0] &ndash; 2025-10-24
 
 ### Added
